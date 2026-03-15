@@ -87,11 +87,44 @@ function Home() {
 
         {/* Social Icons */}
         <div className="flex justify-center gap-6 mt-4 text-2xl text-gray-300">
-          <FaGithub className="hover:text-red-500 transition" />
-          <FaLinkedinIn className="hover:text-red-500 transition" />
-          <RiInstagramLine className="hover:text-red-500 transition" />
-          <FaXTwitter className="hover:text-red-500 transition" />
-        </div>
+
+  <a
+    href="https://github.com/divYansh-25"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-red-500 transition"
+  >
+    <FaGithub />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/divyansh-yadav-ba9261281/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-red-500 transition"
+  >
+    <FaLinkedinIn />
+  </a>
+
+  <a
+    href="https://instagram.com/divyansh.yadav_25"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-red-500 transition"
+  >
+    <RiInstagramLine />
+  </a>
+
+  <a
+    href="https://x.com/Divyansh0025"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-red-500 transition"
+  >
+    <FaXTwitter />
+  </a>
+
+</div>
       </motion.div>
     </section>
   );

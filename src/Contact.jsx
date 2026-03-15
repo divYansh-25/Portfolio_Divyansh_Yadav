@@ -159,7 +159,7 @@ function GetInTouch() {
                 <h3 className="font-semibold">LinkedIn</h3>
 
                 <a
-  href="https://www.linkedin.com/in/divyansh-yadav-ba9261281/"
+  href="https://www.linkedin.com/in/divyansh-yadav25/"
   target="_blank"
   rel="noopener noreferrer"
   className="text-red-400 text-sm hover:underline"
