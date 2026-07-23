@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HiHome,
   HiUser,
@@ -11,8 +11,53 @@ import {
 function Header() {
   const [active, setActive] = useState("home");
 
+  // Automatically update navbar active item while scrolling
+  useEffect(() => {
+    const sectionIds = [
+      "home",
+      "about",
+      "experience",
+      "skills",
+      "projects",
+      "contact",
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+
+        // Section becomes active when it reaches
+        // the middle area of the screen
+        rootMargin: "-35% 0px -55% 0px",
+
+        threshold: 0,
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    // Cleanup
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const scrollToSection = (id) => {
     setActive(id);
+
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
@@ -20,6 +65,7 @@ function Header() {
 
   const navItem = (id, icon, label) => (
     <li
+      key={id}
       onClick={() => scrollToSection(id)}
       className={`
         flex items-center gap-1 md:gap-2
@@ -71,23 +117,39 @@ function Header() {
             hover:scale-110
           "
           style={{
-            filter:
-              "drop-shadow(0 0 12px rgba(239,68,68,0.6))",
+            filter: "drop-shadow(0 0 12px rgba(239,68,68,0.6))",
           }}
         />
 
         {/* Navigation */}
         <ul className="flex items-center gap-2 md:gap-6 font-medium text-sm md:text-base">
           {navItem("home", <HiHome className="text-lg" />, "Home")}
+
           {navItem("about", <HiUser className="text-lg" />, "About")}
+
           {navItem(
             "experience",
             <HiBriefcase className="text-lg" />,
             "Experience"
           )}
-          {navItem("skills", <HiCodeBracket className="text-lg" />, "Skills")}
-          {navItem("projects", <HiFolder className="text-lg" />, "Projects")}
-          {navItem("contact", <HiEnvelope className="text-lg" />, "Contact")}
+
+          {navItem(
+            "skills",
+            <HiCodeBracket className="text-lg" />,
+            "Skills"
+          )}
+
+          {navItem(
+            "projects",
+            <HiFolder className="text-lg" />,
+            "Projects"
+          )}
+
+          {navItem(
+            "contact",
+            <HiEnvelope className="text-lg" />,
+            "Contact"
+          )}
         </ul>
       </nav>
     </header>
