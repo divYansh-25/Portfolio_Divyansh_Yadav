@@ -9,7 +9,6 @@ import {
   FaUser,
   FaBullseye,
   FaLayerGroup,
-  FaConnectdevelop,
 } from "react-icons/fa";
 
 import { SiJavascript, SiMongodb } from "react-icons/si";
