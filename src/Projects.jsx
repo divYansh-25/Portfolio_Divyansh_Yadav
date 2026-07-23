@@ -229,7 +229,7 @@ function Projects() {
                 text-white
               "
             >
-              Projects that turned ideas
+              Projects that turned ideas 
 
               <br className="hidden sm:block" />
 
