@@ -56,7 +56,7 @@ function GetInTouch() {
 
         {/* TITLE */}
         <h1 className="text-center text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-red-500 to-red-900 bg-clip-text text-transparent">
-          Get In Touch
+          <span className="text-white">Get In</span> Touch
         </h1>
 
         <p className="text-center text-gray-400 mt-3 mb-16 max-w-[700px] mx-auto">
