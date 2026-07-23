@@ -5,7 +5,6 @@ import {
   FaReact,
   FaJava,
   FaNodeJs,
-  FaDownload,
   FaArrowRight,
   FaUser,
   FaBullseye,
