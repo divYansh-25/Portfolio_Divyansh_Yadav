@@ -25,16 +25,16 @@ function Projects() {
           {/* PROJECT 1 */}
           <div className="bg-[#140000]/70 border border-white/10 rounded-2xl p-7 backdrop-blur-md shadow-xl hover:-translate-y-2 hover:shadow-red-500/20 hover:border-red-500/30 transition duration-300">
 
-            <img src={todo} alt="Todo App" className="w-16 h-16 mb-4 object-contain"/>
+            <img src={todo} alt="Smart Complaint System" className="w-16 h-16 mb-4 object-contain"/>
 
-            <h2 className="text-xl font-semibold mb-3">To-do List Web App</h2>
+            <h2 className="text-xl font-semibold mb-3">Smart Complaint System</h2>
 
             <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-              Todo Manager for organizing tasks, boosting productivity, and staying focused.
+              AI-powered complaint management platform for submitting, tracking, and analyzing public complaints with role-based access.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-5">
-              {["HTML","CSS","JavaScript"].map((tech,i)=>(
+              {["React.js","Node.js","Expression","MongoDB","AI"].map((tech,i)=>(
                 <span key={i}
                 className="text-xs px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-300">
                   {tech}
@@ -44,7 +44,7 @@ function Projects() {
 
             <div className="flex gap-3">
               <a
-                href="https://github.com/divYansh-25"
+                href="https://github.com/divYansh-25/AI_FSD_ESE"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 text-sm rounded-lg bg-white text-black font-semibold hover:scale-105 transition"
@@ -53,7 +53,7 @@ function Projects() {
               </a>
 
               <a
-                href="https://divyansh-25.github.io/"
+                href="https://smart-complaint-frontend-yp1l.onrender.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-red-600 to-red-900 text-white font-semibold hover:scale-105 transition"

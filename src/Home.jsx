@@ -69,7 +69,7 @@ function Home() {
           </button>
 
           <a
-            href="/Resume1.pdf"
+            href="/Divyansh_Yadav.pdf"
             download
             className="
             flex items-center gap-2
@@ -130,4 +130,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home; 
