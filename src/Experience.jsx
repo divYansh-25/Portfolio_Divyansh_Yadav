@@ -34,7 +34,8 @@ function Experience() {
         </p>
 
         <div className="relative">
-          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-red-500 to-red-900 -translate-x-1/2 shadow-[0_0_20px_rgba(220,38,38,0.7)]" />
+          <div className="hidden md:block absolute left-1/2 top-0 h-full w-[2px] bg-gradient-to-b from-red-500 to-red-900 -translate-x-1/2 shadow-[0_0_20px_rgba(220,38,38,0.7)]"
+          />
 
           {experiences.map((exp, index) => (
             <div
@@ -51,7 +52,7 @@ function Experience() {
                 }`}
               />
 
-              <div className="bg-[#140000]/70 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-xl hover:-translate-y-2 hover:shadow-red-500/20 hover:border-red-500/30 transition duration-300">
+              <div className="bg-[#140000]/70 border border-red-500/30 rounded-2xl p-6 backdrop-blur-md shadow-xl hover:-translate-y-2 hover:shadow-red-500/20 hover:border-red-500/30 transition duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2 gap-1">
                   <h3 className="font-semibold text-lg">{exp.role}</h3>
                   <span className="text-sm text-red-400">{exp.duration}</span>

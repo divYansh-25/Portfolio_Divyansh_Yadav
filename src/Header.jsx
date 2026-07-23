@@ -17,7 +17,6 @@ function Header() {
       "home",
       "about",
       "experience",
-      "skills",
       "projects",
       "contact",
     ];
@@ -77,8 +76,8 @@ function Header() {
         transition-all duration-300
         ${
           active === id
-            ? "text-white bg-white/10 shadow-inner"
-            : "text-gray-300 hover:text-white hover:bg-white/5"
+            ? "text-white bg-red-800/100 shadow-inner"
+            : "text-gray-300 hover:text-white hover:bg-red-500/90 hover:shadow-[0_12px_30px_rgba(239,68,68,0.12)] "
         }
       `}
     >
@@ -88,7 +87,7 @@ function Header() {
   );
 
   return (
-    <header className="fixed top-6 w-full flex justify-center z-50 px-2 md:px-4">
+    <header className="fixed top-6 w-full flex justify-center z-50 px-2 md:px-4 ">
       <nav
         className="
           flex items-center
@@ -100,26 +99,28 @@ function Header() {
           rounded-full
           backdrop-blur-xl
           bg-white/5
-          border border-white/10
+          border border-red-500/60
           shadow-[0_0_40px_rgba(0,0,0,0.4)]
         "
       >
         {/* Logo */}
+        <a href="divyanshyadav.in">
         <img
           src="/ee.png"
           alt="DY Logo"
           className="
-            w-8 h-8
-            md:w-10 md:h-10
-            object-contain
-            shrink-0
-            transition-all duration-300
-            hover:scale-110
+          w-8 h-8
+          md:w-10 md:h-10
+          object-contain
+          shrink-0
+          transition-all duration-300
+          hover:scale-110
           "
           style={{
             filter: "drop-shadow(0 0 12px rgba(239,68,68,0.6))",
           }}
-        />
+          />
+          </a>
 
         {/* Navigation */}
         <ul className="flex items-center gap-2 md:gap-6 font-medium text-sm md:text-base">
@@ -131,12 +132,6 @@ function Header() {
             "experience",
             <HiBriefcase className="text-lg" />,
             "Experience"
-          )}
-
-          {navItem(
-            "skills",
-            <HiCodeBracket className="text-lg" />,
-            "Skills"
           )}
 
           {navItem(

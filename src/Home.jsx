@@ -27,15 +27,15 @@ function Home() {
 
       {/* HERO CONTENT */}
       <motion.div
-        className="flex flex-col items-center gap-6 max-w-2xl relative z-10"
+        className="flex flex-col items-center gap-6 w-full max-w-5xl mx-auto relative z-10"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-gray-200">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white">
           Hi, I am
-          <span className="block mt-2 bg-gradient-to-r from-red-500 to-red-800 bg-clip-text text-transparent">
+          <span className="block mt-2 bg-gradient-to-r from-red-600 to-red-600 bg-clip-text text-transparent">
             Divyansh Yadav
           </span>
         </h1>
@@ -94,7 +94,7 @@ function Home() {
     rel="noopener noreferrer"
     className="hover:text-red-500 transition"
   >
-    <FaGithub />
+    <FaGithub className="text-grey-400"/>
   </a>
 
   <a
@@ -103,7 +103,7 @@ function Home() {
     rel="noopener noreferrer"
     className="hover:text-red-500 transition"
   >
-    <FaLinkedinIn />
+    <FaLinkedinIn className="text-blue-400"/>
   </a>
 
   <a
@@ -112,7 +112,7 @@ function Home() {
     rel="noopener noreferrer"
     className="hover:text-red-500 transition"
   >
-    <RiInstagramLine />
+    <RiInstagramLine className="text-red-400"/>
   </a>
 
   <a

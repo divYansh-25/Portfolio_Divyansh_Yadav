@@ -25,7 +25,7 @@ function App() {
     return <Loader />;
   }
   return (
-    <div className="min-h-screen bg-gradient-to-t from-[#1f0000] via-[#210000] to-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-gradient-to-t from-[#1f0000] via-[#100000f1] to-black text-white overflow-x-hidden">
 
       <Header />
 
@@ -33,7 +33,7 @@ function App() {
         <Home />
         <About />
         <Experience/>
-        <Skills/>
+        {/* <Skills/> */}
         <Projects />
         <Contact/>
         <Footer/>
