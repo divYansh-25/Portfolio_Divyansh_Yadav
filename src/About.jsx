@@ -9,15 +9,18 @@ import {
   FaUser,
   FaBullseye,
   FaLayerGroup,
+  FaHtml5,
+  FaGit,
+  FaGithub,
 } from "react-icons/fa";
 
-import { SiJavascript, SiMongodb } from "react-icons/si";
+import { SiExpress, SiJavascript, SiMongodb } from "react-icons/si";
 
 import {
   MdOutlinePsychology,
   MdAutoAwesome,
 } from "react-icons/md";
-import { FaHandshake } from "react-icons/fa6";
+import { FaCss, FaHandshake } from "react-icons/fa6";
 
 function About() {
   const scrollToProjects = () => {
@@ -357,8 +360,6 @@ function About() {
                   <span className="text-red-500 font-semibold">
                     ABOUT ME
                   </span>
-
-                  <span className="text-gray-300"> / 01</span>
                 </p>
               </div>
             </div>
@@ -565,11 +566,19 @@ function About() {
                 icon={<FaJava className="text-orange-400" />}
                 name="Java"
               />
-
+                <TechBadge
+                  icon={<SiJavascript className="text-yellow-400" />}
+                  name="JavaScript"
+                />
               <TechBadge
-                icon={<SiJavascript className="text-yellow-400" />}
-                name="JavaScript"
+                icon={<FaHtml5 className="text-orange-400" />}
+                name="HTML"
               />
+              <TechBadge
+                icon={<FaCss className="text-blue-400" />}
+                name="CSS"
+              />
+
 
               <TechBadge
                 icon={<FaReact className="text-cyan-400" />}
@@ -580,10 +589,22 @@ function About() {
                 icon={<FaNodeJs className="text-green-500" />}
                 name="Node.js"
               />
+<TechBadge
+  icon={<FaGit className="text-orange-400" />}
+  name="Git"
+/>
+              <TechBadge
+                icon={<SiExpress  />}
+                name="Express"
+              />
 
               <TechBadge
                 icon={<SiMongodb className="text-green-500" />}
                 name="MongoDB"
+              />
+              <TechBadge
+                icon={<FaGithub className="text-orange-400" />}
+                name="Github"
               />
             </div>
 

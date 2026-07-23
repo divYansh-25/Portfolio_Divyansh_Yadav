@@ -67,7 +67,7 @@ function GetInTouch() {
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-10">
 
           {/* FORM CARD */}
-          <div className="bg-[#140000]/70 border border-white/10 rounded-2xl p-7 backdrop-blur-md shadow-xl">
+          <div className="bg-[#140000]/70 border border-red-700 rounded-2xl p-7 backdrop-blur-md shadow-xl">
 
             <h2 className="text-xl font-semibold mb-6">Send a Message</h2>
 
@@ -80,7 +80,7 @@ function GetInTouch() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
+                className="bg-black/30 border border-red-100 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
               />
 
               <input
@@ -90,7 +90,7 @@ function GetInTouch() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
+                className="bg-black/30 border border-white-700 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
               />
 
               <input
@@ -99,7 +99,7 @@ function GetInTouch() {
                 placeholder="Project inquiry (Optional)"
                 value={formData.subject}
                 onChange={handleChange}
-                className="bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
+                className="bg-black/30 border border-white-700 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
               />
 
               <textarea
@@ -109,7 +109,7 @@ function GetInTouch() {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
+                className="bg-black/30 border border-white-700 rounded-xl px-4 py-3 text-sm focus:border-red-500 outline-none"
               />
 
               <button
@@ -131,9 +131,9 @@ function GetInTouch() {
           <div className="flex flex-col gap-6">
 
             {/* EMAIL CARD */}
-            <div className="flex gap-4 items-center bg-[#140000]/70 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+            <div className="flex gap-4 items-center bg-[#140000]/70 border border-red-700 rounded-2xl p-5 backdrop-blur-md">
 
-              <FiMail className="text-2xl text-red-400" />
+              <FiMail className="text-2xl text-white-400" />
 
               <div>
                 <h3 className="font-semibold">Email</h3>
@@ -151,9 +151,9 @@ function GetInTouch() {
             </div>
 
             {/* LINKEDIN */}
-            <div className="flex gap-4 items-center bg-[#140000]/70 border border-white/10 rounded-2xl p-5 backdrop-blur-md">
+            <div className="flex gap-4 items-center bg-[#140000]/70 border border-red-700 rounded-2xl p-5 backdrop-blur-md">
 
-              <FaLinkedinIn className="text-2xl text-red-400" />
+              <FaLinkedinIn className="text-2xl text-blue-400" />
 
               <div>
                 <h3 className="font-semibold">LinkedIn</h3>
@@ -170,7 +170,7 @@ function GetInTouch() {
             </div>
 
             {/* CTA CARD */}
-            <div className="bg-gradient-to-r from-red-600 to-red-900 rounded-2xl p-7 text-white">
+            <div className="bg-gradient-to-r from-red-600 to-red-900 rounded-2xl p-7 text-white border border-white-700">
 
               <h2 className="text-xl font-semibold mb-2">
                 Let’s Build Something Amazing
@@ -182,10 +182,12 @@ function GetInTouch() {
               </p>
 
             </div>
-
+            
           </div>
+          
 
         </div>
+        
       </section>
     </AnimatedSection>
   );
