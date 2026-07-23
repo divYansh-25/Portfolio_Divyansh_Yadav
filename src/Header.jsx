@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   HiHome,
   HiUser,
-  HiCodeBracket,
   HiBriefcase,
   HiFolder,
   HiEnvelope,
