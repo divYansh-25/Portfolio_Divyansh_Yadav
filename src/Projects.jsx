@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import {
   FaGithub,
@@ -39,8 +39,8 @@ function Projects() {
 
       description:
         "AI-powered complaint management platform for submitting, tracking, analyzing, and managing public complaints with intelligent AI insights and role-based access control.",
-      image:scs,
-      
+      image: scs,
+
 
       technologies: [
         { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
@@ -120,6 +120,38 @@ function Projects() {
     setActiveProject((prev) =>
       prev === 0 ? projects.length - 1 : prev - 1
     );
+  };
+
+  const wheelLock = useRef(false);
+
+  const handleWheel = (e) => {
+    // Ignore tiny touchpad movements
+    if (Math.abs(e.deltaY) < 20 && Math.abs(e.deltaX) < 20) return;
+
+    // Prevent one long touchpad scroll from changing multiple projects
+    if (wheelLock.current) return;
+
+    wheelLock.current = true;
+
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      // Vertical touchpad scroll
+      // if (e.deltaY > 0) {
+      //   nextProject();
+      // } else {
+      //   previousProject();
+      // }
+    } else {
+      // Horizontal touchpad swipe
+      if (e.deltaX > 0) {
+        nextProject();
+      } else {
+        previousProject();
+      }
+    }
+
+    setTimeout(() => {
+      wheelLock.current = false;
+    }, 700);
   };
 
   const getPosition = (index) => {
@@ -229,7 +261,7 @@ function Projects() {
                 text-white
               "
             >
-              Projects that turned ideas 
+              Projects that turned ideas
 
               <br className="hidden sm:block" />
 
@@ -260,12 +292,13 @@ function Projects() {
           {/* ================================================= */}
 
           <div
+            onWheel={handleWheel}
             className="
-              relative
-              lg:h-[510px]
-              xl:h-[540px]
-              perspective-[1600px]
-            "
+    relative
+    lg:h-[510px]
+    xl:h-[540px]
+    perspective-[1600px]
+  "
           >
             {projects.map((project, index) => {
               const position = getPosition(index);
@@ -284,9 +317,8 @@ function Projects() {
                     duration-700
                     ease-in-out
 
-                    ${
-                      position === "active"
-                        ? `
+                    ${position === "active"
+                      ? `
                           relative
                           lg:-translate-x-1/2
                           lg:translate-z-0
@@ -295,37 +327,37 @@ function Projects() {
                           scale-100
                           pointer-events-auto
                         `
-                        : ""
+                      : ""
                     }
 
-                    ${
-                      position === "left"
-                        ? `
+                    ${position === "left"
+                      ? `
                           hidden
                           lg:block
                           lg:-translate-x-[115%]
                           lg:scale-[0.78]
                           lg:-rotate-y-[18deg]
-                          opacity-35
+                          opacity-25
+                          blur-sm
                           z-10
                           pointer-events-none
                         `
-                        : ""
+                      : ""
                     }
 
-                    ${
-                      position === "right"
-                        ? `
+                    ${position === "right"
+                      ? `
                           hidden
                           lg:block
                           lg:translate-x-[15%]
                           lg:scale-[0.78]
                           lg:rotate-y-[18deg]
-                          opacity-35
+                          opacity-25
+                          blur-sm
                           z-10
                           pointer-events-none
                         `
-                        : ""
+                      : ""
                     }
                   `}
                   style={{
@@ -856,11 +888,10 @@ function Projects() {
                     duration-500
                   "
                   style={{
-                    width: `${
-                      ((activeProject + 1) /
-                        projects.length) *
+                    width: `${((activeProject + 1) /
+                      projects.length) *
                       100
-                    }%`,
+                      }%`,
                   }}
                 />
               </div>
